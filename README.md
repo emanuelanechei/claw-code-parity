@@ -35,25 +35,32 @@
 
 ## Backstory
 
-At 4 AM on March 31, 2026, I woke up to my phone blowing up with notifications. The Claude Code source had been exposed, and the entire dev community was in a frenzy. My girlfriend in Korea was genuinely worried I might face legal action from Anthropic just for having the code on my machine — so I did what any engineer would do under pressure: I sat down, ported the core features to Python from scratch, and pushed it before the sun came up.
+At 4 AM on March 31, 2026, the Claude Code source was exposed, and the entire dev community was in a frenzy. What followed wasn't a typical human-led engineering effort—it was the first large-scale autonomous coding operation orchestrated entirely by AI agents.
 
-The whole thing was orchestrated end-to-end using [oh-my-codex (OmX)](https://github.com/Yeachan-Heo/oh-my-codex) by [@bellman_ych](https://x.com/bellman_ych) — a workflow layer built on top of OpenAI's Codex ([@OpenAIDevs](https://x.com/OpenAIDevs)). I used `$team` mode for parallel code review and `$ralph` mode for persistent execution loops with architect-level verification. The entire porting session — from reading the original harness structure to producing a working Python tree with tests — was driven through OmX orchestration.
+This repository is maintained by **lobsters and claws**—autonomous AI coding agents created by **Bellman** ([@bellman_ych](https://x.com/bellman_ych)) and **Yeongyu** ([@q_yeon_gyu_kim](https://x.com/q_yeon_gyu_kim)). The entire Python port, from reading the original harness structure to producing a working tree with tests, was driven through [oh-my-codex (OmX)](https://github.com/Yeachan-Heo/oh-my-codex) using `$team` mode for parallel code review and `$ralph` mode for persistent execution loops with architect-level verification. No human wrote the core implementation—every line was generated, reviewed, and refined by autonomous agents.
 
-The result is a clean-room Python rewrite that captures the architectural patterns of Claude Code's agent harness without copying any proprietary source. I'm now actively collaborating with [@bellman_ych](https://x.com/bellman_ych) — the creator of OmX himself — to push this further. The basic Python foundation is already in place and functional, but we're just getting started. **Stay tuned — a much more capable version is on the way.**
+The result is a clean-room Python rewrite that captures the architectural patterns of Claude Code's agent harness without copying any proprietary source. This isn't merely a port; it's a demonstration of what autonomous coding harnesses can achieve when directed by clear architectural vision and rigorous agent orchestration.
 
-https://github.com/instructkr/claw-code
+We are actively pushing this further. The basic Python foundation is already in place and functional, but we're just getting started. **Stay tuned—a much more capable version is on the way.**
+
+https://github.com/ultraworkers/claw-code
 
 ![Tweet screenshot](assets/tweet-screenshot.png)
 
-## The Creators Featured in Wall Street Journal For Avid Claude Code Fans
+## The Creators
 
-I've been deeply interested in **harness engineering** — studying how agent systems wire tools, orchestrate tasks, and manage runtime context. This isn't a sudden thing. The Wall Street Journal featured my work earlier this month, documenting how I've been one of the most active power users exploring these systems:
+**claw-code** is autonomously built and maintained by **UltraWorkers** — a collective of AI coding agents (lobsters and claws) orchestrated by:
+
+- **Bellman** ([@bellman_ych](https://x.com/bellman_ych)) — Creator of [oh-my-codex (OmX)](https://github.com/Yeachan-Heo/oh-my-codex), the agent orchestration layer that drives all development
+- **Yeongyu** ([@q_yeon_gyu_kim](https://x.com/q_yeon_gyu_kim)) — Architect of the claw-code harness and parallel agent workflows
+
+The entire codebase—from initial port to ongoing feature development—is generated through autonomous agent sessions using OmX `$team` and `$ralph` modes. No human writes the core implementation; humans provide architectural direction, agents execute.
+
+### Featured Coverage
+
+Sigrid Jin has been deeply involved in harness engineering—studying how agent systems wire tools, orchestrate tasks, and manage runtime context. Coverage from *The Wall Street Journal* (March 21, 2026) documents the rise of autonomous coding:
 
 > AI startup worker Sigrid Jin, who attended the Seoul dinner, single-handedly used 25 billion of Claude Code tokens last year. At the time, usage limits were looser, allowing early enthusiasts to reach tens of billions of tokens at a very low cost.
->
-> Despite his countless hours with Claude Code, Jin isn't faithful to any one AI lab. The tools available have different strengths and weaknesses, he said. Codex is better at reasoning, while Claude Code generates cleaner, more shareable code.
->
-> Jin flew to San Francisco in February for Claude Code's first birthday party, where attendees waited in line to compare notes with Cherny. The crowd included a practicing cardiologist from Belgium who had built an app to help patients navigate care, and a California lawyer who made a tool for automating building permit approvals using Claude Code.
 >
 > "It was basically like a sharing party," Jin said. "There were lawyers, there were doctors, there were dentists. They did not have software engineering backgrounds."
 >
